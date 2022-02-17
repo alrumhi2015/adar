@@ -1,7 +1,7 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-      <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{asset('backend/images/logo.svg')}}" class="mr-2" alt="logo"/></a>
-      <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('backend/images/logo-mini.svg')}}" alt="logo"/></a>
+      <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{asset('backend/images/logo.png')}}" class="mr-2" alt="logo"/></a>
+      <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('backend/images/logo.png')}}" alt="logo"/></a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
       <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -15,7 +15,7 @@
                 <i class="icon-search"></i>
               </span>
             </div>
-            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            <input type="text" class="form-control" id="navbar-search-input" placeholder="بحث" aria-label="search" aria-describedby="search">
           </div>
         </li>
       </ul>
@@ -26,7 +26,7 @@
             <span class="count"></span>
           </a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+            <p class="mb-0 font-weight-normal float-left dropdown-header">الإشعارات</p>
             <a class="dropdown-item preview-item">
               <div class="preview-thumbnail">
                 <div class="preview-icon bg-success">
@@ -34,39 +34,14 @@
                 </div>
               </div>
               <div class="preview-item-content">
-                <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                <h6 class="preview-subject font-weight-normal">طالب جديد تم إضافته</h6>
                 <p class="font-weight-light small-text mb-0 text-muted">
-                  Just now
+                 الآن
                 </p>
               </div>
             </a>
-            <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                <div class="preview-icon bg-warning">
-                  <i class="ti-settings mx-0"></i>
-                </div>
-              </div>
-              <div class="preview-item-content">
-                <h6 class="preview-subject font-weight-normal">Settings</h6>
-                <p class="font-weight-light small-text mb-0 text-muted">
-                  Private message
-                </p>
-              </div>
-            </a>
-            <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                <div class="preview-icon bg-info">
-                  <i class="ti-user mx-0"></i>
-                </div>
-              </div>
-              <div class="preview-item-content">
-                <h6 class="preview-subject font-weight-normal">New user registration</h6>
-                <p class="font-weight-light small-text mb-0 text-muted">
-                  2 days ago
 
-                </p>
-              </div>
-            </a>
+ 
           </div>
         </li>
         <li class="nav-item nav-profile dropdown">

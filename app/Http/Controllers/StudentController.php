@@ -18,12 +18,12 @@ class StudentController extends Controller
 
     // user operation
 
-    public function viewUsers(){
+    public function viewStudent(){
 
 
         $students = Student::orderBy('created_at', 'DESC')->get();
 
-        return view('admin.pages.users.view_students',compact('students'));
+        return view('admin.pages.students.view_student',compact('students'));
 
 
     }
@@ -115,7 +115,7 @@ class StudentController extends Controller
 
         $student = Student::find($id);
 
-       return view('admin.pages.students.update_students',compact('student'));
+       return view('admin.pages.students.update_student',compact('student'));
 
 
     }
@@ -139,13 +139,10 @@ class StudentController extends Controller
         $validated = $req->validate([
             'full_name' => 'required',
             'mobile' => 'required',
-            'email' => 'required|unique:students|email|max:255',
-            'civil_number' => 'required|unique:students|max:255',
+            'email' => 'required|email|max:255',
+            'civil_number' => 'required|max:255',
             'gender' => 'required',
             'nationality' => 'required',
-            'student_photo_path' => '',
-            'student_passport_path' => '',
-            'student_id_path' => '',
         ]);
 
         //for student photo

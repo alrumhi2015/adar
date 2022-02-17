@@ -11,7 +11,8 @@
                   <h4 class="card-title">إضافة طالب</h4>
                   <form class="form-sample" method="post" action="{{ route('update.student')}}" enctype="multipart/form-data">
                     @csrf
-
+                      {{-- send the id --}}
+                      <input type="hidden" name="id"  value="{{ $student->id}}" />
                     <p class="card-description">
                      المعلومات الشخصية
                     </p>
@@ -21,7 +22,7 @@
                           <label class="col-sm-3 col-form-label">الاسم الكامل</label>
                           <div class="col-sm-9">
                             <input type="text" name="full_name" required value="{{ $student->full_name}}"  placeholder="الاسم الكامل" class="form-control" />
-                            @error('first_name')
+                            @error('full_name')
                              <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                           </div>

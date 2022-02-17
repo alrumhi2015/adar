@@ -24,12 +24,15 @@ use Illuminate\Support\Facades\Mail;
 
 
 
-//   the following is for Login ,Register , update profile , logout or remote token
 
-// get the user
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+//APi for all students
+Route::get('/students', [App\Http\Controllers\api\StudentApiController::class,'index']);
+Route::post('/students', [App\Http\Controllers\api\StudentApiController::class,'store']);
+Route::post('/students/show/{id}', [App\Http\Controllers\api\StudentApiController::class,'show']);
+Route::put('/students/update/{skill}', [App\Http\Controllers\api\StudentApiController::class,'update']);
+Route::delete('/students/destroy/{skill}', [App\Http\Controllers\api\StudentApiController::class,'destroy']);
+
 
 
 

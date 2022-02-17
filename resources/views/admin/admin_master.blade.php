@@ -34,10 +34,35 @@
 
 
   <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+
       .navbar .navbar-brand-wrapper .navbar-brand img {
 
     height: 48px;
 }
+
+.sidebar .nav .nav-item.active > .nav-link {
+    background: #9b833c;
+    position: relative;
+}
+
+.btn-primary, .wizard > .actions a {
+    color: #fff;
+    background-color: #9b833c;
+    border-color: #9b833c;
+}
+
+
+.card.tale-bg {
+    background: #ecea5b;
+}
+
+body{
+
+    font-family: 'Cairo', sans-serif;
+}
+
 
    </style>
 </head>
@@ -51,7 +76,7 @@
 
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
-      @include('admin.body.setting')
+
       <!-- partial -->
 
       <!-- partial:partials/_sidebar.html -->

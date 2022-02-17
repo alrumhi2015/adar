@@ -49,8 +49,8 @@
                           <label class="col-sm-3 col-form-label">الجنس</label>
                           <div class="col-sm-9">
                             <select name="gender" required   class="form-control">
-                              <option value="Male">طالب </option>
-                              <option value="Female">طالبة</option>
+                              <option value="طالب">طالب </option>
+                              <option value="طالبة">طالبة</option>
                             </select>
                           </div>
                         </div>

@@ -5,7 +5,7 @@
 
 <div class="card">
     <div class="card-body">
-      <h4 class="card-title">إدارة الطاب</h4>
+      <h4 class="card-title">إدارة الطلاب</h4>
 
 
 
