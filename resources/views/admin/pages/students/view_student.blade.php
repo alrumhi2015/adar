@@ -2,14 +2,32 @@
 
 
 @section('admin')
+@php
+$studentLabel = 'إضافة طالب';
+$titleLabel = 'إدارة الطلاب';
+$usertype = Auth::user()->user_type;
 
+if($usertype == 'm-manager'){
+
+    $studentLabel = 'إضافة طالب';
+    $titleLabel = 'إدارة الطلاب';
+}elseif ($usertype == 'f-manager') {
+
+    $studentLabel = 'إضافة طالبة';
+    $titleLabel = 'إدارة الطالبات';
+
+}else {
+    $studentLabel = 'إضافة طالب';
+    $titleLabel = 'إدارة الطلاب';
+}
+@endphp
 <div class="card">
     <div class="card-body">
-      <h4 class="card-title">إدارة الطلاب</h4>
+      <h4 class="card-title">{{$titleLabel}}</h4>
 
 
 
-      <a href="{{ route('add.student')}}" class="btn btn-primary mb-5" >إضافة طالب</a>
+      <a href="{{ route('add.student')}}" class="btn btn-primary mb-5" >{{$studentLabel}}</a>
 
       <div class="table-responsive">
         <table  class="table" id="myusertable">
@@ -41,7 +59,18 @@
                 <td>{{ $student->mobile}}</td>
                 <td>{{ $student->email}}</td>
                 <td>{{ $student->civil_number}}</td>
-                <td><label class="badge badge-danger">{{ $student->gender}}</label></td>
+                <td><label class="badge badge-danger">
+
+
+                    @if ($student->gender == 'm')
+                    طالب
+
+                    @else
+
+طالبة
+                    @endif
+
+                </label></td>
                 <td>{{ $student->nationality}}</td>
                 <td> <img width="50px" height="50px" src="{{ (!empty($student->student_photo_path))?  url($student->student_photo_path): asset('backend/images/user.jpg')}}" alt="صورة"/></td>
                 <td> <img width="50px" height="50px" src="{{ (!empty($student->student_passport_path))?  url($student->student_passport_path): asset('backend/images/user.jpg')}}" alt="صورة"/></td>

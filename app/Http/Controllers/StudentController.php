@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Image;
 
 
@@ -21,7 +22,18 @@ class StudentController extends Controller
     public function viewStudent(){
 
 
-        $students = Student::orderBy('created_at', 'DESC')->get();
+        $usertype = Auth::user()->user_type;
+
+
+           if($usertype == 'm-manager'){
+            $students = Student::where('gender', 'm')->orderBy('created_at', 'DESC')->get();
+           }elseif ($usertype == 'f-manager') {
+            $students = Student::where('gender', 'f')->orderBy('created_at', 'DESC')->get();
+           }else {
+            $students = Student::orderBy('created_at', 'DESC')->get();
+           }
+
+
 
         return view('admin.pages.students.view_student',compact('students'));
 

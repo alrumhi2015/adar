@@ -11,7 +11,24 @@
       <li class="nav-item" >
         <a class="nav-link" href="{{ route('view.students')}}">
             <i class="icon-head menu-icon"></i>
-          <span class="menu-title">الطلاب</span>
+
+       @php
+            $studentLabel = 'الطلبة';
+           $usertype = Auth::user()->user_type;
+
+           if($usertype == 'm-manager'){
+
+            $studentLabel = 'الطلاب';
+           }elseif ($usertype == 'f-manager') {
+
+            $studentLabel = 'الطالبات';
+
+           }else {
+            $studentLabel = 'الطلبة';
+           }
+       @endphp
+
+          <span class="menu-title">{{$studentLabel}}</span>
         </a>
       </li>
 

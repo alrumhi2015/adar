@@ -18,10 +18,46 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+      <!-- plugins:css -->
+  <link rel="stylesheet" href="{{ asset('backend/vendors/feather/feather.css')}}">
+  <link rel="stylesheet" href="{{ asset('backend/vendors/ti-icons/css/themify-icons.css')}}">
+  <link rel="stylesheet" href="{{ asset('backend/vendors/css/vendor.bundle.base.css')}}">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="{{ asset('backend/vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">
+  <link rel="stylesheet" href="{{ asset('backend/vendors/ti-icons/css/themify-icons.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('backend/js/select.dataTables.min.css')}}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{{ asset('backend/css/vertical-layout-light/style.css')}}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{{ asset('backend/images/logo.png')}}" />
+
+  <script src="{{ asset('js/jquery-3.6.0.min.js')}}"></script>
+
+  <link rel="stylesheet" href="{{ asset('css/jquery.dataTables.min.css')}}">
+  <script src="{{ asset('js/jquery.dataTables.min.js')}}"></script>
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+
+      .navbar .navbar-brand-wrapper .navbar-brand img {
+
+    height: 48px;
+}
+</style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -73,11 +109,11 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
 
-        <main class="py-4">
+        {{-- <main class="py-4"> --}}
             @yield('content')
-        </main>
+        {{-- </main> --}}
     </div>
 </body>
 </html>

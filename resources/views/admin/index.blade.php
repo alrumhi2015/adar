@@ -21,9 +21,9 @@
   </div>
   <div class="row">
     <div class="col-md-6 grid-margin stretch-card">
-      <div style=" padding-top:  0 !important;"  class="card tale-bg">
-        <div  class="card-people mt-auto">
-          <img src="{{asset('backend/images/dashboard/people.png')}}" alt="people">
+      <div style="   !important;"  class="card tale-bg">
+        <div s  class="card-people mt-auto">
+          <img src="{{asset('backend/images/dashboard/people1.jpg')}}" alt="people">
           <div class="weather-info">
             <div class="d-flex">
               <div>

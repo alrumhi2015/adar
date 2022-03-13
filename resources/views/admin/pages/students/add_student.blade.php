@@ -4,11 +4,29 @@
 
 @section('admin')
 
+@php
+$studentLabel = 'إضافة طالب';
+$usertype = Auth::user()->user_type;
+
+if($usertype == 'm-manager'){
+
+    $studentLabel = 'إضافة طالب';
+}elseif ($usertype == 'f-manager') {
+
+    $studentLabel = 'إضافة طالبة';
+
+}else {
+    $studentLabel = 'إضافة طالب';
+}
+@endphp
+
 <div class="row">
   <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">إضافة طالب</h4>
+
+
+                  <h4 class="card-title">{{$studentLabel}}</h4>
                   <form class="form-sample" method="post" action="{{ route('students.save')}}" enctype="multipart/form-data">
                     @csrf
 
@@ -49,8 +67,15 @@
                           <label class="col-sm-3 col-form-label">الجنس</label>
                           <div class="col-sm-9">
                             <select name="gender" required   class="form-control">
-                              <option value="طالب">طالب </option>
-                              <option value="طالبة">طالبة</option>
+
+                                @if (Auth::user()->user_type == 'm-manager')
+                                <option value="m" selected >طالب</option>
+
+                                @else
+                                <option value="f" selected>طالبة</option>
+
+                                @endif
+                  
                             </select>
                           </div>
                         </div>
