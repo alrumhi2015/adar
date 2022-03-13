@@ -21,9 +21,9 @@
   </div>
   <div class="row">
     <div class="col-md-6 grid-margin stretch-card">
-      <div style="   !important;"  class="card tale-bg">
-        <div s  class="card-people mt-auto">
-          <img src="{{asset('backend/images/dashboard/people1.jpg')}}" alt="people">
+      <div style=" ">
+        <div s  class="card-people ">
+          <img src="{{asset('backend/images/dashboard/people.png')}}" alt="people">
           <div class="weather-info">
             <div class="d-flex">
               <div>
@@ -103,7 +103,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>محمد الرمحي</td>
+                  <td>ميزة تدشن قريبا </td>
                   <td class="font-weight-bold">91410155</td>
                   <td>alrumhi2015@gmail.com</td>
 

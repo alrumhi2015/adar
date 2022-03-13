@@ -54,9 +54,7 @@
 }
 
 
-.card.tale-bg {
-    background: #ecea5b;
-}
+
 
 body{
 
